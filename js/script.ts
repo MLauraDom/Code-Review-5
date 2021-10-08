@@ -3,12 +3,12 @@ class Locations {
     constructor(public name:string, public city:string, public zip:number, public adress:string, public image:string, public date:Date){}
     display1(){ 
         return `
-        <div class="card p-0 shadow-lg bg-body rounded m-1"><img src="${this.image}" class="card-img-top" alt="${this.name}" /><div class="card-body m-auto p-2">`
+        <div class="card p-0 shadow-lg bg-body rounded m-1"><img src="${this.image}" class="card-img-top" alt="${this.name}" />`
     }
     display2(){
         return  `
         
-          <h5 class="card-title">${this.name}</h5>`
+          <h4 class="card-header text-center">${this.name}</h4><div class="card-body p-2">`
     }
     display3(){
         return `
@@ -16,7 +16,7 @@ class Locations {
       `
     }
     display10() {
-        return `<p class="h6">Created on  ${this.date.toUTCString()}</p></div></div>`
+        return `</div><div class="card-footer text-center"><p class="h6">Created on  ${this.date.toUTCString()}</p></div></div>`
     }
 
     display(){
@@ -45,15 +45,15 @@ class Restaurant extends Locations {
 
 //Class Event
 class Events extends Locations {
-    constructor(public event: string, public name:string, public city:string, public zip:number, public adress:string, public image:string, public web:string, public day:string, public time:string, public price:number, public date:Date){
+    constructor(public name: string, public event:string, public city:string, public zip:number, public adress:string, public image:string, public web:string, public day:string, public time:string, public price:number, public date:Date){
             super(name, city, zip, adress, image, date);
         }
         display6(){
             return `
-              <h4 class="card-title">${this.event} Concert</h4>`
+              <h5 class="card-title">${this.event}</h5>`
         }
         display7(){
-            return `<p class="h5 text-primary text-center"> On ${this.day} at ${this.time}</p>`
+            return `<p class="h5 text-primary text-center"> Concert On ${this.day} at ${this.time}</p>`
         }
 
         display8(){
@@ -64,7 +64,7 @@ class Events extends Locations {
         }
 
         display(){
-            return super.display1() + this.display6() + this.display7() + super.display2() + super.display3() + this.display8() + this.display9() + super.display10();
+            return super.display1() + super.display2() + this.display7() + this.display6() + super.display3() + this.display8() + this.display9() + super.display10();
         }
 }
 
@@ -74,7 +74,7 @@ const b = new Date(2016, 1, 26, 16, 34, 30);
 const c = new Date(2017, 11, 23, 7, 33, 25);
 const d = new Date(2021, 9, 24, 8, 42, 30);
 const e = new Date(2019, 7, 1, 16, 0, 30);
-const f = new Date(2018, 15, 24, 10, 33, 30);
+const f = new Date(2018, 3, 24, 10, 33, 30);
 
 //Creating the Objects
 

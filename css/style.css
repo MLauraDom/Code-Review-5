@@ -19,7 +19,7 @@
         font-family: 'Teko', sans-serif;
     }
     img {
-        height: 0;
+        display: none;
     }
     #travel {
         color: #13453d;

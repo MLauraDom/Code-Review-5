@@ -25,16 +25,16 @@ var Locations = /** @class */ (function () {
         this.date = date;
     }
     Locations.prototype.display1 = function () {
-        return "\n        <div class=\"card p-0 shadow-lg bg-body rounded m-1\"><img src=\"" + this.image + "\" class=\"card-img-top\" alt=\"" + this.name + "\" /><div class=\"card-body m-auto p-2\">";
+        return "\n        <div class=\"card p-0 shadow-lg bg-body rounded m-1\"><img src=\"" + this.image + "\" class=\"card-img-top\" alt=\"" + this.name + "\" />";
     };
     Locations.prototype.display2 = function () {
-        return "\n        \n          <h5 class=\"card-title\">" + this.name + "</h5>";
+        return "\n        \n          <h4 class=\"card-header text-center\">" + this.name + "</h4><div class=\"card-body p-2\">";
     };
     Locations.prototype.display3 = function () {
         return "\n          <p class=\"card-text\"><b>Address:</b>  " + this.adress + " , " + this.zip + "  " + this.city + "</p>\n      ";
     };
     Locations.prototype.display10 = function () {
-        return "<p class=\"h6\">Created on  " + this.date.toUTCString() + "</p></div></div>";
+        return "</div><div class=\"card-footer text-center\"><p class=\"h6\">Created on  " + this.date.toUTCString() + "</p></div></div>";
     };
     Locations.prototype.display = function () {
         return this.display1() + this.display2() + this.display3() + this.display10();
@@ -71,10 +71,10 @@ var Restaurant = /** @class */ (function (_super) {
 //Class Event
 var Events = /** @class */ (function (_super) {
     __extends(Events, _super);
-    function Events(event, name, city, zip, adress, image, web, day, time, price, date) {
+    function Events(name, event, city, zip, adress, image, web, day, time, price, date) {
         var _this = _super.call(this, name, city, zip, adress, image, date) || this;
-        _this.event = event;
         _this.name = name;
+        _this.event = event;
         _this.city = city;
         _this.zip = zip;
         _this.adress = adress;
@@ -87,10 +87,10 @@ var Events = /** @class */ (function (_super) {
         return _this;
     }
     Events.prototype.display6 = function () {
-        return "\n              <h4 class=\"card-title\">" + this.event + " Concert</h4>";
+        return "\n              <h5 class=\"card-title\">" + this.event + "</h5>";
     };
     Events.prototype.display7 = function () {
-        return "<p class=\"h5 text-primary text-center\"> On " + this.day + " at " + this.time + "</p>";
+        return "<p class=\"h5 text-primary text-center\"> Concert On " + this.day + " at " + this.time + "</p>";
     };
     Events.prototype.display8 = function () {
         return "<p><b>Webseite:</b> " + this.web + "</p>";
@@ -99,7 +99,7 @@ var Events = /** @class */ (function (_super) {
         return "<p class=\"h5 text-end text-success\"> Price:  \u20AC " + (this.price).toFixed(2) + "</p>";
     };
     Events.prototype.display = function () {
-        return _super.prototype.display1.call(this) + this.display6() + this.display7() + _super.prototype.display2.call(this) + _super.prototype.display3.call(this) + this.display8() + this.display9() + _super.prototype.display10.call(this);
+        return _super.prototype.display1.call(this) + _super.prototype.display2.call(this) + this.display7() + this.display6() + _super.prototype.display3.call(this) + this.display8() + this.display9() + _super.prototype.display10.call(this);
     };
     return Events;
 }(Locations));
@@ -109,7 +109,7 @@ var b = new Date(2016, 1, 26, 16, 34, 30);
 var c = new Date(2017, 11, 23, 7, 33, 25);
 var d = new Date(2021, 9, 24, 8, 42, 30);
 var e = new Date(2019, 7, 1, 16, 0, 30);
-var f = new Date(2018, 15, 24, 10, 33, 30);
+var f = new Date(2018, 3, 24, 10, 33, 30);
 //Creating the Objects
 var L1 = new Locations("St. Charles Church", "Vienna", 1010, "Karlsplatz 1", "img/karlsplatz.jpg", a);
 var L2 = new Locations("Schönbrunner Zoo", "Vienna", 1130, "Maxingstraße 13b", "img/zoo.jpg", b);
