@@ -1,31 +1,94 @@
-body {
-    margin: 0;
-    padding: 0;
+@media screen and (max-width: 480px) {
+    body {
+        margin: 0;
+        padding: 0;
+    }
+    header {
+        background-color: #13453d;
+        font-family: "Permanent Marker", cursive;
+        color: white;
+    }
+    footer {
+        background-color: #13453d;
+        font-family: "Permanent Marker", cursive;
+        color: white;
+    }
+    main {
+        background-color: #8ff8e8;
+        color: #13453d;
+    }
+    img {
+        height: 0;
+    }
+    #travel {
+        color: #13453d;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
 }
 
-header {
-  background-color: #13453d;
-  font-family: 'Permanent Marker', cursive;
-  color: white;
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    body {
+        margin: 0;
+        padding: 0;
+    }
+    header {
+        background-color: #13453d;
+        font-family: "Permanent Marker", cursive;
+        color: white;
+    }
+    footer {
+        background-color: #13453d;
+        font-family: "Permanent Marker", cursive;
+        color: white;
+    }
+    main {
+        background-color: #8ff8e8;
+        color: #13453d;
+    }
+    img {
+        height: 20vw;
+        object-fit: cover;
+    }
+    #travel {
+        color: #13453d;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 2em;
+        row-gap: 2em;
+    }
 }
 
-footer {
-  background-color: #13453d;
-  font-family: 'Permanent Marker', cursive;
-  color: white;
-}
+@media screen and (min-width: 768px) {
+    body {
+        margin: 0;
+        padding: 0;
+    }
+    header {
+        background-color: #13453d;
+        font-family: "Permanent Marker", cursive;
+        color: white;
+    }
+    footer {
+        background-color: #13453d;
+        font-family: "Permanent Marker", cursive;
+        color: white;
+    }
+    main {
+        background-color: #8ff8e8;
+        color: #13453d;
+    }
+    img {
+        height: 20vw;
+        object-fit: cover;
+    }
+    #travel {
+        color: #13453d;
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        column-gap: 2em;
+        row-gap: 2em;
 
-main { 
-  background-color: #8ff8e8;
-  font-family: 'Concert One', cursive;
-  color: #13453d;
-}
-
-img{
-    height: 50%;
-    object-fit: cover;
-}
-
-#travel {
-    color:#13453d;
+    }
 }
