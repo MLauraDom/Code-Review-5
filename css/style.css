@@ -1,11 +1,31 @@
-header {
-    background-color: #2B5E45;
+body {
+    margin: 0;
+    padding: 0;
 }
 
-main {
-    background-color: #56BC8A;
+header {
+  background-color: #13453d;
+  font-family: 'Permanent Marker', cursive;
+  color: white;
 }
 
 footer {
-    background-color: #2B5E45;
+  background-color: #13453d;
+  font-family: 'Permanent Marker', cursive;
+  color: white;
+}
+
+main { 
+  background-color: #8ff8e8;
+  font-family: 'Concert One', cursive;
+  color: #13453d;
+}
+
+img{
+    height: 50%;
+    object-fit: cover;
+}
+
+#travel {
+    color:#13453d;
 }
